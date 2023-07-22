@@ -16,6 +16,7 @@ const ReturnedHtml = ({ inputValue }) => {
 
   function handleCopy(shadeColor) {
     setCopy(shadeColor);
+    navigator.clipboard.writeText(shadeColor)
     setTimeout(() => {
       setCopy(false);
     }, 2000);
